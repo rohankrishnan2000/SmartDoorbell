@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/assets/sentinel-doorbell-ai-logo.png" alt="Sentinel Doorbell AI logo" width="180" />
+</p>
+
 # Sentinel Doorbell AI
 
 Sentinel Doorbell AI is a local-first smart doorbell platform built as a breadth-heavy engineering showcase: edge computer vision, FastAPI services, a PostgreSQL-ready event model, React operations dashboard, agentic incident review, August lock integration stubs, cloud/devops artifacts, and ML pipelines that can be made real incrementally.
