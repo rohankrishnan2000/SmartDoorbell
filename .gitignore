@@ -1,0 +1,12 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.pyc
+doorbell.db
+media/events/*
+!media/events/.gitkeep
+dashboard/node_modules/
+dashboard/dist/
+.pytest_cache/
+

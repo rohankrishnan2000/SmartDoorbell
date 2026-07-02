@@ -1,0 +1,14 @@
+[Unit]
+Description=Sentinel Doorbell AI API
+After=network-online.target
+
+[Service]
+WorkingDirectory=/opt/sentinel-doorbell
+EnvironmentFile=/opt/sentinel-doorbell/.env
+ExecStart=/opt/sentinel-doorbell/.venv/bin/uvicorn backend.app.main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
+

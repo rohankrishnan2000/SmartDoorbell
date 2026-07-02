@@ -1,0 +1,15 @@
+[project]
+name = "sentinel-doorbell-ai"
+version = "0.1.0"
+description = "Fullstack edge AI smart doorbell showcase with ML, agents, and devops scaffolding."
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["backend/tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+

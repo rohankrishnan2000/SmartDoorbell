@@ -1,0 +1,39 @@
+services:
+  api:
+    build:
+      context: ../..
+      dockerfile: deploy/docker/Dockerfile.api
+    ports:
+      - "8000:8000"
+    environment:
+      DATABASE_URL: postgresql+psycopg://doorbell:doorbell@postgres:5432/doorbell
+      MEDIA_DIR: /app/media
+    volumes:
+      - ../../media:/app/media
+    depends_on:
+      - postgres
+
+  dashboard:
+    build:
+      context: ../..
+      dockerfile: deploy/docker/Dockerfile.dashboard
+    ports:
+      - "8080:80"
+    depends_on:
+      - api
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: doorbell
+      POSTGRES_PASSWORD: doorbell
+      POSTGRES_DB: doorbell
+    volumes:
+      - doorbell_pg:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7-alpine
+
+volumes:
+  doorbell_pg:
+

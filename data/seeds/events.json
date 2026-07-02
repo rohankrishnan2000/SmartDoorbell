@@ -1,0 +1,15 @@
+[
+  {
+    "id": "evt_risk_002",
+    "event_type": "package_theft_risk",
+    "risk_score": 0.71,
+    "summary": "Person lingered near an unattended package after dark."
+  },
+  {
+    "id": "evt_unlock_003",
+    "event_type": "known_visitor",
+    "risk_score": 0.18,
+    "summary": "Trusted visitor matched policy; unlock requires dashboard approval."
+  }
+]
+
